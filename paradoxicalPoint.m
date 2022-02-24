@@ -1,6 +1,6 @@
 function x = paradoxicalPoint(vars, param)
 
-syms k_2 theta_2 k_2i theta_2i a b c l_1 psi;
+syms k_2 theta_2 k_2i theta_2i;
 
 a = param(1);
 b = param(2);

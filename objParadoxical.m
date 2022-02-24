@@ -8,7 +8,7 @@ function f = objParadoxical(vars, param)
 k_2      = vars(1);
 theta_2  = vars(2);
 k_2i     = vars(3);
-theta_2i = vars(4);
+theta_2i = 0; % принатое допущение, так как контактная траектория всегда пересекает theta_2 = 0
 
 a = param(1);
 b = param(2);
