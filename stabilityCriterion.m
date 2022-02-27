@@ -3,7 +3,7 @@ function mu = stabilityCriterion(a, b, c, l_1, l_2, psi)
 syms k_2 k_2i theta_2 theta_2i;
 
 % Диапазоны k_2 и theta_2
-theta_2_max = pi/2;
+theta_2_max = pi/2-0.01;
 theta_2_min = 0;
 k_2_min = 0.001;
 k_2_max = l_2;
@@ -15,8 +15,8 @@ theta_2_tang = coordTang(2);
 k_2i = coordTang(3); % Координаты н.у. траектории контакта
 theta_2i = 0; % Принятое допущение
 
-k_2_set = linspace(k_2_min, k_2_max, 20);
-theta_2_set = linspace(theta_2_min, theta_2_max, 20);
+k_2_set = linspace(k_2_min, k_2_max, 30);
+theta_2_set = linspace(theta_2_min, theta_2_max, 30);
 
 count_stable = 0;
 count_nonstable = 0;
@@ -42,4 +42,4 @@ for k=k_2_set
     end
 end
 % Коэффициент стабильности - процент стабильных конфигураций захвата
-mu = (count_stable+count_nonstable) / count_stable;
+mu = (count_stable+count_nonstable)/count_stable;
